@@ -14,7 +14,7 @@ use App\Http\Controllers\RegController;
 |
 */
 
-Route::post('/register-hire', [RegController::class, 'storeHire']);
+Route::post('/register', [RegController::class, 'storeHire']);
 
 Route::get('/', function () {
     return view('index');
@@ -40,8 +40,8 @@ Route::get('/profile', function () {
 Route::get('/register', function () {
     return view('register');
 });
-Route::get('/register-hire', function () {
-    return view('register_for_hire');
+Route::get('/register', function () {
+    return view('register');
 });
 
 

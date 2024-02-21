@@ -23,33 +23,21 @@
             <div class="row">
                 <div class="col-md-12">
                     <form action="#" class="p-4 border rounded">
-                        {{-- selection cart --}}
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-md-6">
-                                    <div class="card custom-card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Registration</h5>
-                                            <p class="card-text">Choose an option:</p>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="registrationOption"
-                                                    id="hireRadio" value="hire">
-                                                <label class="form-check-label" for="hireRadio">
-                                                    I want to hire
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="registrationOption"
-                                                    id="jobRadio" value="job">
-                                                <label class="form-check-label" for="jobRadio">
-                                                    Find Job
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        @csrf
+                        
+                        {{-- Select user type --}}
+                        <div class="text-center">
+                            <label class="radio-button" id="option1-label">
+                                <input type="radio" name="option" value="looking_emps" id="option1">
+                                I am looking for epmloyees
+                            </label>
+
+                            <label class="radio-button" id="option2-label">
+                                <input type="radio" name="option" value="looking_jobs" id="option2">
+                                I am looking for jobs
+                            </label>
                         </div>
+
                         <div class="row form-group">
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="text-black" for="fname">Email</label>

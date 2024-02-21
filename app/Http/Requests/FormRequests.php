@@ -22,7 +22,7 @@ class FormRequests extends FormRequest
     public function rules(): array
     {
         return [
-            'company_name' => 'required',
+            'name' => 'required',
             'email' => 'required | email',
             'password' => 'required | confirmed | min:8',
             'password_confirmation' => 'required | min:8',

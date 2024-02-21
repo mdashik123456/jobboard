@@ -1,8 +1,22 @@
-.custom-card {
-    background-color: #164fba;
-    border-color: #1634ba;
-    color: #ffffff;
-  }
-  .selected-label {
-    background-color: #ffffff54;
-  }
+/* Hide default radio button */
+input[type="radio"] {
+  display: none;
+}
+
+/* Style for custom radio button */
+.radio-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50px; /* making it round */
+}
+
+/* Style for selected radio button */
+.radio-button.selected {
+  background-color: #1745C3;
+  color: #fff;
+  border-color: #1745C3;
+}

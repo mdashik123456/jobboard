@@ -2,14 +2,14 @@
 
 @section('main-section')
     <!-- HOME -->
-    <section class="home-section section-hero overlay bg-image" style="background-image: url({{asset('assets/images/hero_1.jpg')}} );"
-        id="home-section">
+    <section class="home-section section-hero overlay bg-image"
+        style="background-image: url({{ asset('assets/images/hero_1.jpg') }} );" id="home-section">
 
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-12">
                     <div class="mb-5 text-center">
-                        <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
+                        <h1 class="text-white font-weight-bold">Navigate Your Career Journey</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur
                             perferendis.</p>
                     </div>
@@ -67,11 +67,11 @@
     </section>
 
     <section class="py-5 bg-image overlay-primary fixed overlay" id="next"
-        style="background-image: url({{asset('assets/images/hero_1.jpg')}} );">
+        style="background-image: url({{ asset('assets/images/hero_1.jpg') }} );">
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-7 text-center">
-                    <h2 class="section-title mb-2 text-white">JobBoard Site Stats</h2>
+                    <h2 class="section-title mb-2 text-white">JobQuest Site Stats</h2>
                     <p class="lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde
                         officiis recusandae sequi excepturi corrupti.</p>
                 </div>
@@ -124,9 +124,10 @@
 
             <ul class="job-listings mb-5">
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                    <a href="{{ url('/job-single')}}"></a>
+                    <a href="{{ url('/job-single') }}"></a>
                     <div class="job-listing-logo">
-                        <img src="{{ asset('assets/images/job_logo_1.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        <img src="{{ asset('assets/images/job_logo_1.jpg') }}"
+                            alt="Free Website Template by Free-Template.co" class="img-fluid">
                     </div>
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
@@ -144,9 +145,10 @@
 
                 </li>
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                    <a href="{{ url('/job-single')}}"></a>
+                    <a href="{{ url('/job-single') }}"></a>
                     <div class="job-listing-logo">
-                        <img src="{{ asset('assets/images/job_logo_2.jpg')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        <img src="{{ asset('assets/images/job_logo_2.jpg') }}"
+                            alt="Free Website Template by Free-Template.co" class="img-fluid">
                     </div>
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
@@ -164,10 +166,10 @@
                 </li>
 
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                    <a href="{{ url('/job-single')}}"></a>
+                    <a href="{{ url('/job-single') }}"></a>
                     <div class="job-listing-logo">
-                        <img src="{{ asset('assets/images/job_logo_3.jpg')}}" alt="Free Website Template by Free-Template.co"
-                            class="img-fluid">
+                        <img src="{{ asset('assets/images/job_logo_3.jpg') }}"
+                            alt="Free Website Template by Free-Template.co" class="img-fluid">
                     </div>
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
@@ -185,10 +187,10 @@
                 </li>
 
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                    <a href="{{ url('/job-single')}}"></a>
+                    <a href="{{ url('/job-single') }}"></a>
                     <div class="job-listing-logo">
-                        <img src="{{ asset('assets/images/job_logo_4.jpg')}}" alt="Free Website Template by Free-Template.co"
-                            class="img-fluid">
+                        <img src="{{ asset('assets/images/job_logo_4.jpg') }}"
+                            alt="Free Website Template by Free-Template.co" class="img-fluid">
                     </div>
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
@@ -206,10 +208,10 @@
                 </li>
 
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                    <a href="{{ url('/job-single')}}"></a>
+                    <a href="{{ url('/job-single') }}"></a>
                     <div class="job-listing-logo">
-                        <img src="{{ asset('assets/images/job_logo_5.jpg')}}" alt="Free Website Template by Free-Template.co"
-                            class="img-fluid">
+                        <img src="{{ asset('assets/images/job_logo_5.jpg') }}"
+                            alt="Free Website Template by Free-Template.co" class="img-fluid">
                     </div>
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
@@ -226,10 +228,10 @@
                     </div>
                 </li>
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                    <a href="{{ url('/job-single')}}"></a>
+                    <a href="{{ url('/job-single') }}"></a>
                     <div class="job-listing-logo">
-                        <img src="{{ asset('assets/images/job_logo_1.jpg')}}" alt="Free Website Template by Free-Template.co"
-                            class="img-fluid">
+                        <img src="{{ asset('assets/images/job_logo_1.jpg') }}"
+                            alt="Free Website Template by Free-Template.co" class="img-fluid">
                     </div>
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
@@ -247,10 +249,10 @@
 
                 </li>
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                    <a href="{{ url('/job-single')}}"></a>
+                    <a href="{{ url('/job-single') }}"></a>
                     <div class="job-listing-logo">
-                        <img src="{{ asset('assets/images/job_logo_2.jpg')}}" alt="Free Website Template by Free-Template.co"
-                            class="img-fluid">
+                        <img src="{{ asset('assets/images/job_logo_2.jpg') }}"
+                            alt="Free Website Template by Free-Template.co" class="img-fluid">
                     </div>
 
                     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
@@ -277,7 +279,8 @@
         </div>
     </section>
 
-    <section class="py-5 bg-image overlay-primary fixed overlay" style="background-image: url({{asset('assets/images/hero_1.jpg')}} );">
+    <section class="py-5 bg-image overlay-primary fixed overlay"
+        style="background-image: url({{ asset('assets/images/hero_1.jpg') }} );">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8">
@@ -308,29 +311,29 @@
 
                 </div>
                 <div class="col-6 col-lg-3 col-md-6 text-center">
-                    <img src="{{ asset('assets/images/logo_mailchimp.svg')}}" alt="Image" class="img-fluid logo-1">
+                    <img src="{{ asset('assets/images/logo_mailchimp.svg') }}" alt="Image" class="img-fluid logo-1">
                 </div>
                 <div class="col-6 col-lg-3 col-md-6 text-center">
-                    <img src="{{ asset('assets/images/logo_paypal.svg')}}" alt="Image" class="img-fluid logo-2">
+                    <img src="{{ asset('assets/images/logo_paypal.svg') }}" alt="Image" class="img-fluid logo-2">
                 </div>
                 <div class="col-6 col-lg-3 col-md-6 text-center">
-                    <img src="{{ asset('assets/images/logo_stripe.svg')}}" alt="Image" class="img-fluid logo-3">
+                    <img src="{{ asset('assets/images/logo_stripe.svg') }}" alt="Image" class="img-fluid logo-3">
                 </div>
                 <div class="col-6 col-lg-3 col-md-6 text-center">
-                    <img src="{{ asset('assets/images/logo_visa.svg')}}" alt="Image" class="img-fluid logo-4">
+                    <img src="{{ asset('assets/images/logo_visa.svg') }}" alt="Image" class="img-fluid logo-4">
                 </div>
 
                 <div class="col-6 col-lg-3 col-md-6 text-center">
-                    <img src="{{ asset('assets/images/logo_apple.svg')}}" alt="Image" class="img-fluid logo-5">
+                    <img src="{{ asset('assets/images/logo_apple.svg') }}" alt="Image" class="img-fluid logo-5">
                 </div>
                 <div class="col-6 col-lg-3 col-md-6 text-center">
-                    <img src="{{ asset('assets/images/logo_tinder.svg')}}" alt="Image" class="img-fluid logo-6">
+                    <img src="{{ asset('assets/images/logo_tinder.svg') }}" alt="Image" class="img-fluid logo-6">
                 </div>
                 <div class="col-6 col-lg-3 col-md-6 text-center">
-                    <img src="{{ asset('assets/images/logo_sony.svg')}}" alt="Image" class="img-fluid logo-7">
+                    <img src="{{ asset('assets/images/logo_sony.svg') }}" alt="Image" class="img-fluid logo-7">
                 </div>
                 <div class="col-6 col-lg-3 col-md-6 text-center">
-                    <img src="{{ asset('assets/images/logo_airbnb.svg')}}" alt="Image" class="img-fluid logo-8">
+                    <img src="{{ asset('assets/images/logo_airbnb.svg') }}" alt="Image" class="img-fluid logo-8">
                 </div>
             </div>
         </div>
@@ -346,14 +349,15 @@
                 <div class="row">
                     <div class="col-lg-6 align-self-center text-center text-lg-left">
                         <blockquote>
-                            <p>&ldquo;Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero
-                                dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum
-                                repudiandae.&rdquo;</p>
-                            <p><cite> &mdash; Corey Woods, @Dribbble</cite></p>
+                            <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorem suscipit,
+                                corporis vero magni quo laudantium illo quod natus impedit ipsum modi pariatur cumque beatae
+                                error ab in quos distinctio.&rdquo;</p>
+                            <p><cite> &mdash; Larry Page, @Google</cite></p>
                         </blockquote>
                     </div>
                     <div class="col-lg-6 align-self-end text-center text-lg-right">
-                        <img src="{{ asset('assets/images/person_transparent_2.png')}}" alt="Image" class="img-fluid mb-0">
+                        <img src="{{ asset('assets/images/person_transparent_2.png') }}" alt="Image"
+                            class="img-fluid mb-0">
                     </div>
                 </div>
             </div>
@@ -362,40 +366,20 @@
                 <div class="row">
                     <div class="col-lg-6 align-self-center text-center text-lg-left">
                         <blockquote>
-                            <p>&ldquo;Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero
-                                dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum
-                                repudiandae.&rdquo;</p>
-                            <p><cite> &mdash; Chris Peters, @Google</cite></p>
+                            <p>&ldquo;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, et quo deleniti quis
+                                incidunt molestiae recusandae laborum vero ad, adipisci architecto officia aliquid id alias.
+                                Dolorum, modi. Nihil, excepturi ipsum.&rdquo;</p>
+                            <p><cite> &mdash; Bill Getes, @Microsoft</cite></p>
                         </blockquote>
                     </div>
                     <div class="col-lg-6 align-self-end text-center text-lg-right">
-                        <img src="{{ asset('assets/images/person_transparent.png')}}" alt="Image" class="img-fluid mb-0">
+                        <img src="{{ asset('assets/images/person_transparent.png') }}" alt="Image"
+                            class="img-fluid mb-0">
                     </div>
                 </div>
             </div>
 
         </div>
 
-    </section>
-
-    <section class="pt-5 bg-image overlay-primary fixed overlay" style="background-image: url({{asset('assets/images/hero_1.jpg')}} );">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 align-self-center text-center text-md-left mb-5 mb-md-0">
-                    <h2 class="text-white">Get The Mobile Apps</h2>
-                    <p class="mb-5 lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora
-                        adipisci impedit.</p>
-                    <p class="mb-0">
-                        <a href="#" class="btn btn-dark btn-md px-4 border-width-2"><span
-                                class="icon-apple mr-3"></span>App Store</a>
-                        <a href="#" class="btn btn-dark btn-md px-4 border-width-2"><span
-                                class="icon-android mr-3"></span>Play Store</a>
-                    </p>
-                </div>
-                <div class="col-md-6 ml-auto align-self-end">
-                    <img src="{{ asset('assets/images/apps.png')}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
-                </div>
-            </div>
-        </div>
     </section>
 @endsection
