@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/quill.snow.css') }}">
+    
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">    
