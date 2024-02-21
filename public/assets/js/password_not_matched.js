@@ -1,6 +1,6 @@
 const pass_not_match = document.querySelector("#password_not_matched");
-const retype_pass = document.querySelector("#retype_pass");
-const pass = document.querySelector("#pass");
+const password_confirmation = document.querySelector("#password_confirmation");
+const pass = document.querySelector("#password");
 const text_danger = document.querySelector('.text-danger');
 
 pass.addEventListener('keyup', ()=>{
@@ -12,11 +12,11 @@ pass.addEventListener('keyup', ()=>{
     }
 });
 
-retype_pass.addEventListener('keyup', () => {
-    if (retype_pass.value === ''){
+password_confirmation.addEventListener('keyup', () => {
+    if (password_confirmation.value === ''){
         pass_not_match.innerHTML = 'Password cannot be empty';
         pass_not_match.style.color = 'red';
-    } else if(pass.value !== retype_pass.value) {
+    } else if(pass.value !== password_confirmation.value) {
         pass_not_match.innerHTML = 'Password do not match';
         pass_not_match.style.color = 'red';
     } else {

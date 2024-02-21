@@ -24,9 +24,9 @@ class FormRequests extends FormRequest
         return [
             'company_name' => 'required',
             'email' => 'required | email',
-            'pass' => 'required | min:8',
-            'retype_pass' => 'required | min:8',
-            'logo' => 'required',
+            'password' => 'required | confirmed | min:8',
+            'password_confirmation' => 'required | min:8',
+            'logo' => 'required | image',
         ];
     }
 }

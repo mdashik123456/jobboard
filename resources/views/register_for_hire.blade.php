@@ -29,6 +29,10 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('create_success') }}
                         </div>
+                        @elseif (session()->has('create_failed'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('create_failed') }}
+                        </div>
                     @endif
 
                     <form action="{{ url('/register-hire') }}" class="p-4 border rounded" method="post"
@@ -57,11 +61,11 @@
                         <div class="row form-group">
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="text-black">Password</label>
-                                <input  type="password" name="pass" id="pass" class="form-control" placeholder="Password">
+                                <input  type="password" name="password" id="password" class="form-control" placeholder="Password">
 
                                 <span class="text-danger"></span>
 
-                                @error('pass')
+                                @error('password')
                                     <div class="text-danger">{{$message}}</div>
                                 @enderror
                             </div>
@@ -69,11 +73,11 @@
                         <div class="row form-group mb-4">
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="text-black">Re-Type Password</label>
-                                <input  type="password" name="retype_pass" id="retype_pass" class="form-control"
+                                <input  type="password" name="password_confirmation" id="password_confirmation" class="form-control"
                                 placeholder="Re-type Password">
                                 <span id="password_not_matched"></span>
                                 <script src="{{ asset('assets/js/password_not_matched.js') }}"></script>
-                                @error('retype_pass')
+                                @error('password_confirmation')
                                     <div class="text-danger">{{$message}}</div>
                                 @enderror
                             </div>
