@@ -289,7 +289,7 @@
                         adipisci impedit.</p>
                 </div>
                 <div class="col-md-3 ml-auto">
-                    <a href="#" class="btn btn-warning btn-block btn-lg">Sign Up</a>
+                    <a href="{{ url('/register') }}" class="btn btn-warning btn-block btn-lg">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -304,8 +304,9 @@
                     <div class="row justify-content-center">
                         <div class="col-md-7">
                             <h2 class="section-title mb-2">Company We've Helped</h2>
-                            <p class="lead">Porro error reiciendis commodi beatae omnis similique voluptate rerum ipsam
-                                fugit mollitia ipsum facilis expedita tempora suscipit iste</p>
+                            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, doloremque
+                                exercitationem in repellat voluptatem iusto et provident libero numquam culpa distinctio,
+                                expedita sapiente dolor sint fugiat quibusdam? Mollitia, dolor laborum.</p>
                         </div>
                     </div>
 

@@ -6,14 +6,28 @@ use Illuminate\Http\Request;
 use App\Http\Requests\FormRequests;
 use App\Models\Company;
 use App\Models\Employee;
+use Exception;
+use PhpParser\Node\Stmt\Catch_;
 
 class RegController extends Controller
 {
-    //
     public function storeHire(FormRequests $req) {
+
         if ($req->input('option') == "company"){
+            $user = Company::select('email')->get();
+            foreach($user as $u){
+                if($u->email === $req->input("email")){
+                    return redirect()->back()->with('create_failed', 'Registration Failed! Email already Exists'); 
+                }  
+            }
             $user = new Company();
         } else{
+            $user = Employee::select('email')->get();
+            foreach($user as $u){
+                if($u->email === $req->input("email")){
+                    return redirect()->back()->with('create_failed', 'Registration Failed! Email already Exists'); 
+                }  
+            }
             $user = new Employee();
         }
         
@@ -25,10 +39,11 @@ class RegController extends Controller
         $user->pic = $logoName;
         $req->file('logo')->storeAs('public/uploads', $logoName);
 
-        if($user->save()){
-            return back()->with('create_success', 'Account created successfully');
-        }else{
-            return back()->with('create_failed', 'Sorry, Account Can not created! Try again later.');
+        try{
+            $user->save();
+            return redirect()->back()->with('create_success', 'Account created successfully');
+        }catch(Exception){
+            return redirect()->back()->with('create_failed', 'Sorry, Registration Failed! Try again later.');
         }
 
     }

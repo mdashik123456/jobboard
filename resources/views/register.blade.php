@@ -55,7 +55,7 @@
                         <div class="row form-group">
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="text-black" id="name_lable">Company Name</label>
-                                <input name="name" type="text" id="name" class="form-control"
+                                <input required name="name" type="text" id="name" class="form-control"
                                     placeholder="Company Name">
                                 @error('name')
                                     <div class="text-danger">{{ $message }}</div>
@@ -66,7 +66,7 @@
                         <div class="row form-group">
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="text-black">Email</label>
-                                <input type="text" name="email" id="email" class="form-control"
+                                <input required type="text" name="email" id="email" class="form-control"
                                     placeholder="Email address">
                                 @error('email')
                                     <div class="text-danger">{{ $message }}</div>
@@ -77,7 +77,7 @@
                         <div class="row form-group">
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="text-black">Password</label>
-                                <input type="password" name="password" id="password" class="form-control"
+                                <input required type="password" name="password" id="password" class="form-control"
                                     placeholder="Password">
 
                                 <span class="text-danger"></span>
@@ -91,8 +91,9 @@
                         <div class="row form-group mb-4">
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="text-black">Re-Type Password</label>
-                                <input type="password" name="password_confirmation" id="password_confirmation"
+                                <input required type="password" name="password_confirmation" id="password_confirmation"
                                     class="form-control" placeholder="Re-type Password">
+
                                 <span id="password_not_matched"></span>
                                 <script src="{{ asset('assets/js/password_not_matched.js') }}"></script>
                                 @error('password_confirmation')
@@ -104,7 +105,7 @@
                         <div class="row form-group mb-4">
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="text-black" id="logo_lable">Upload Company Logo</label>
-                                <input type="file" name="logo" id="logo" class="form-control">
+                                <input required type="file" name="logo" id="logo" class="form-control">
                                 @error('logo')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
