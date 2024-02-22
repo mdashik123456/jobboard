@@ -24,6 +24,7 @@
             <div class="row">
                 <div class="col-md-12 mb-5">
 
+                    
                     {{-- alert --}}
                     @if (session()->has('create_success'))
                         <div class="alert alert-success" role="alert">
