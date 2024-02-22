@@ -7,44 +7,43 @@ use App\Http\Requests\FormRequests;
 use App\Models\Company;
 use App\Models\Employee;
 use Exception;
-use PhpParser\Node\Stmt\Catch_;
 
 class RegController extends Controller
 {
-    public function storeHire(FormRequests $req) {
+    public function storeHire(FormRequests $req)
+    {
 
-        if ($req->input('option') == "company"){
+        if ($req->input('option') == "company") {
             $user = Company::select('email')->get();
-            foreach($user as $u){
-                if($u->email === $req->input("email")){
-                    return redirect()->back()->with('create_failed', 'Registration Failed! Email already Exists'); 
-                }  
+            foreach ($user as $u) {
+                if ($u->email === $req->input("email")) {
+                    return redirect()->back()->with('create_failed', 'Registration Failed! Email already Exists');
+                }
             }
             $user = new Company();
-        } else{
+        } else {
             $user = Employee::select('email')->get();
-            foreach($user as $u){
-                if($u->email === $req->input("email")){
-                    return redirect()->back()->with('create_failed', 'Registration Failed! Email already Exists'); 
-                }  
+            foreach ($user as $u) {
+                if ($u->email === $req->input("email")) {
+                    return redirect()->back()->with('create_failed', 'Registration Failed! Email already Exists');
+                }
             }
             $user = new Employee();
         }
-        
+
         $user->name = $req->input('name');
         $user->email = $req->input('email');
         $user->password = md5($req->input('password'));
-        
-        $logoName = time() . "." .$req->file('logo')->extension();
+
+        $logoName = time() . "." . $req->file('logo')->extension();
         $user->pic = $logoName;
         $req->file('logo')->storeAs('public/uploads', $logoName);
 
-        try{
+        try {
             $user->save();
             return redirect()->back()->with('create_success', 'Account created successfully');
-        }catch(Exception){
+        } catch (Exception) {
             return redirect()->back()->with('create_failed', 'Sorry, Registration Failed! Try again later.');
         }
-
     }
 }

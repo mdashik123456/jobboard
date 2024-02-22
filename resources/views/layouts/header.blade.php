@@ -59,8 +59,7 @@
               <li><a href="{{ url('/profile') }}">Profile</a></li>
             
               <li><a href="{{ url('/contact') }}">Contact</a></li>
-              <li class="d-lg-none"><a href="{{ url('/post-job') }}"><span class="mr-2">+</span> Post a Job</a></li>
-              <li class="d-lg-none"><a href="{{ url('/login')}}">Log In</a></li>
+              
             </ul>
           </nav>
           

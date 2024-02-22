@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,19 @@ use App\Http\Controllers\RegController;
 |
 */
 
+
+Route::get('/login', [SiteController::class, 'login']);
+Route::get('/register', [SiteController::class,'registration']);
+
+Route::get('/logout', [LoginController::class, 'logout']);
+Route::get('/viewSession', [LoginController::class, 'view_session']);
+
 Route::post('/register', [RegController::class, 'storeHire']);
+Route::post('/login', [LoginController::class, 'login']);
+
+
+
+
 
 Route::get('/', function () {
     return view('index');
@@ -28,17 +42,11 @@ Route::get('/contact', function () {
 Route::get('/job-single', function () {
     return view('job-single');
 });
-Route::get('/login', function () {
-    return view('login');
-});
 Route::get('/post-job', function () {
     return view('post-job');
 });
 Route::get('/profile', function () {
     return view('profile');
-});
-Route::get('/register', function () {
-    return view('register');
 });
 Route::get('/register', function () {
     return view('register');
