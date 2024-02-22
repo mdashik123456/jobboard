@@ -37,7 +37,7 @@ class RegController extends Controller
 
         $logoName = time() . "." . $req->file('logo')->extension();
         $user->pic = $logoName;
-        $req->file('logo')->storeAs('public/uploads', $logoName);
+        $req->file('logo')->move('uploads/', $logoName);
 
         try {
             $user->save();

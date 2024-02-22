@@ -9,7 +9,7 @@
                     <div class="card p-3 py-4">
 
                         <div class="text-center">
-                            <img src="{{ asset('assets/images/person_2.jpg') }}" width="100" class="rounded-circle">
+                            <img src="{{ asset('uploads') }}/{{$users->pic}}" width="100" class="rounded-circle">
                         </div>
 
                         <div class="text-center mt-3">
@@ -22,10 +22,15 @@
                             </div>
 
                             <div class="px-3">
-                                <a href="#" class="pt-3 pb-3 pr-3 pl-0 underline-none"><span
-                                        class="icon-facebook"></span></a>
-                                <a href="#" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
-                                <a href="#" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
+                                @if ($users->facebook)
+                                    <a href="{{$users->facebook}}" class="pt-3 pb-3 pr-3 pl-0 underline-none"><span class="icon-facebook"></span></a>
+                                @endif
+                                @if ($users->twitter)
+                                    <a href="{{$users->twitter}}" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
+                                @endif
+                                @if ($users->linkedin)
+                                    <a href="{{$users->linkedin}}" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
+                                @endif
                             </div>
                         </div>
                     </div>

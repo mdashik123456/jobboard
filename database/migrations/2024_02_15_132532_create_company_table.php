@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('comType')->nullable();
             $table->string('orgType', 20)->nullable();
             $table->string('about')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('linkedin')->nullable();
             $table->string('pic')->nullable();
             $table->timestamps();
         });

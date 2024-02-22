@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('password');
             $table->string('skill')->nullable();
             $table->string('about')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('linkedin')->nullable();
             $table->string('pic')->nullable();
             $table->timestamps();
         });
