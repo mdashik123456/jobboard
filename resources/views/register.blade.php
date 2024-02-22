@@ -23,7 +23,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-5">
-
                     
                     {{-- alert --}}
                     @if (session()->has('create_success'))
