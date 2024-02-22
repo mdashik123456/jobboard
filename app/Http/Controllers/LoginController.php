@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\FormRequests;
 use App\Models\Company;
 use App\Models\Employee;
 use Exception;
@@ -15,8 +14,10 @@ class LoginController extends Controller
         try {
             if ($req->input('option') == "company") {
                 $users = Company::where('email', '=', $req->input("email"))->where('password', '=', md5($req->input("password")))->first();
+                session(['type' => 'company']);
             } else {
                 $users = Employee::where('email', '=', $req->input("email"))->where('password', '=', md5($req->input("password")))->first();
+                session(['type' => 'eemployee']);
             }
 
             // foreach ($users as $user) {
@@ -41,8 +42,7 @@ class LoginController extends Controller
     }
     public function logout()
     {
-        session()->forget(['name', 'email', 'pic']);
-        // return redirect('/login')->with('success_msg', 'Logged Out!');
-        return redirect('/views');
+        session()->forget(['name', 'email', 'pic', 'type']);
+        return redirect()->back()->with('success_msg', 'Logged Out!');
     }
 }

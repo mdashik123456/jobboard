@@ -13,6 +13,9 @@ class SiteController extends Controller
 
     public function login()
     {
+        if(session()->has('email') && session()->has('name') && session()->has('type')){
+            return redirect(url('/'));
+        }
         return view('login');
     }
 }
