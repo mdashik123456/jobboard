@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('comType');
+            $table->string('orgType', 20);
+            $table->string('about');
             $table->string('pic');
             $table->timestamps();
         });

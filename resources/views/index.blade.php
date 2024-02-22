@@ -14,11 +14,11 @@
                             perferendis.</p>
                     </div>
                     <form method="" class="search-jobs-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                          </div><br>
+
                         <div class="row mb-5">
-                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <input type="text" class="form-control form-control-lg"
-                                    placeholder="Job title, Company...">
-                            </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%"
                                     data-live-search="true" title="Select Region">
@@ -38,6 +38,14 @@
                                     data-live-search="true" title="Select Job Type">
                                     <option>Part Time</option>
                                     <option>Full Time</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%"
+                                    data-live-search="true" title="Select Organization Type">
+                                    <option>All</option>
+                                    <option>Govt</option>
+                                    <option>Non-Govt</option>
                                 </select>
                             </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">

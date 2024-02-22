@@ -19,6 +19,7 @@ use App\Http\Controllers\SiteController;
 
 Route::get('/login', [SiteController::class, 'login']);
 Route::get('/register', [SiteController::class,'registration']);
+Route::get('/profile', [SiteController::class, 'profile']);
 
 Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/viewSession', [LoginController::class, 'view_session']);
@@ -44,9 +45,6 @@ Route::get('/job-single', function () {
 });
 Route::get('/post-job', function () {
     return view('post-job');
-});
-Route::get('/profile', function () {
-    return view('profile');
 });
 Route::get('/register', function () {
     return view('register');

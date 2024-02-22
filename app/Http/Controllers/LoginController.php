@@ -14,19 +14,12 @@ class LoginController extends Controller
         try {
             if ($req->input('option') == "company") {
                 $users = Company::where('email', '=', $req->input("email"))->where('password', '=', md5($req->input("password")))->first();
-                session(['type' => 'company']);
+                session(['type' => 'company', 'id' => $users->company_id]); //I use first(). that's why don't need to use foreach loop
             } else {
                 $users = Employee::where('email', '=', $req->input("email"))->where('password', '=', md5($req->input("password")))->first();
-                session(['type' => 'eemployee']);
+                session(['type' => 'eemployee', 'id' => $users->employee_id]);
             }
 
-            // foreach ($users as $user) {
-            session([
-                'email' => $users->email,
-                'name' => $users->name,
-                'pic' => $users->pic
-            ]);
-            // }
             return redirect()->back()->with('success_msg', 'Login Success');
         } catch (Exception) {
             return redirect()->back()->with('error_msg', 'Login Failed');
@@ -42,7 +35,7 @@ class LoginController extends Controller
     }
     public function logout()
     {
-        session()->forget(['name', 'email', 'pic', 'type']);
+        session()->forget(['id', 'name', 'email', 'pic', 'type']);
         return redirect()->back()->with('success_msg', 'Logged Out!');
     }
 }

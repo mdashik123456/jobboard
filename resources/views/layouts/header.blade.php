@@ -63,7 +63,7 @@
 
                     <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                         <div class="ml-auto">
-                            @if (session()->has('email') && session()->has('name') && session()->has('type'))
+                            @if (session()->has('id') && session()->has('type'))
                                 {{-- <a href="{{ url('/login') }}"
                                     class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span
                                         class="mr-2"></span>Dashboard</a> --}}
