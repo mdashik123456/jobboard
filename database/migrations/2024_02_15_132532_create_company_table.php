@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('comType');
-            $table->string('orgType', 20);
-            $table->string('about');
-            $table->string('pic');
+            $table->string('comType')->nullable();
+            $table->string('orgType', 20)->nullable();
+            $table->string('about')->nullable();
+            $table->string('pic')->nullable();
             $table->timestamps();
         });
     }
